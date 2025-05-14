@@ -19,14 +19,14 @@ export default function ScrollingClient({ children }: ScrollingClientProps) {
   const y = useTransform(scrollYProgress, [0, 1], [100, 0]);
 
   return (
-    <section className="h-[200vh]  flex items-center justify-center">
+    <section className="h-[200vh] flex items-center justify-center">
       <div
         ref={ref}
         className="sticky top-1/4 h-screen flex items-center justify-center"
       >
         <motion.div
           style={{ opacity, y }}
-          className=" text-white px-10 py-20 rounded-lg text-center text-4xl font-bold shadow-2xl"
+          className=" text-white rounded-lg text-center text-4xl font-bold shadow-2xl"
         >
           {children}
         </motion.div>
