@@ -10,7 +10,7 @@ export default function Navbar() {
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   return (
-    <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl">
+    <header className="  top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl">
       {/* Nav Container */}
       <motion.nav
         className="w-full px-6 py-3 bg-black/60 backdrop-blur-md rounded-full flex items-center justify-between text-white shadow-md"
