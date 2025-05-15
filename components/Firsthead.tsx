@@ -1,9 +1,12 @@
 "use client";
 import Image from "next/image";
-import Background from "./../public/images/abstract.svg";
-import BackgroundMobile from "./../public/images/abstract-mobile.svg";
-import { useScroll, useTransform, motion } from "framer-motion";
 import { JSX, useRef } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
+
+import Navbar from "@/components/Navbar";
+
+import BackgroundMobile from "./../public/images/abstract-mobile.svg";
+import Background from "./../public/images/abstract.svg";
 
 export default function Section(): JSX.Element {
   const container = useRef<HTMLDivElement | null>(null);
@@ -13,7 +16,7 @@ export default function Section(): JSX.Element {
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["70%", "-10%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["100%", "-60%"]);
 
   return (
     <div
@@ -21,16 +24,16 @@ export default function Section(): JSX.Element {
       className="relative h-screen overflow-hidden"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      {/* Background */}
-      <div className="fixed inset-0 -z-10">
-        <motion.div style={{ y }} className="relative w-full h-full">
+      <Navbar />
+      <div className="fixed top-[-20vh] inset-0 -z-10  h-[100vh] bg-black/80">
+        <motion.div style={{ y }} className="relative w-full h-full ">
           {/* Desktop Background */}
-          <div className="hidden sm:block absolute inset-0">
+          <div className="hidden sm:block absolute inset-0 bg-black/80">
             <Image
               src={Background}
               alt="Background"
               fill
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "contain", top: "20vh" }}
             />
           </div>
 
@@ -46,13 +49,12 @@ export default function Section(): JSX.Element {
         </motion.div>
       </div>
 
-      {/* Foreground Content */}
       <div className="relative flex items-center justify-center h-full px-5 sm:px-18 2xl:px-30">
-           <div className="w-[75rem] 2xl:w-full flex flex-col uppercase font-extrabold text-[clamp(2rem,6vw,8rem)] px-5 sm:px-18 2xl:px-30 leading-none ">
-            <h1 className="">Your new-breed,</h1>  
-            <h1 className="text-end">end-to-end</h1>  
-            <h1 className="sm:ps-30">digital ally</h1>
-          </div>
+        <div className="w-[75rem] 2xl:w-full flex flex-col uppercase font-extrabold text-[clamp(2rem,6vw,8rem)] px-5 sm:px-18 2xl:px-30 leading-none ">
+          <h1 className="">Your new-breed,</h1>
+          <h1 className="text-end">end-to-end</h1>
+          <h1 className="sm:ps-30">digital ally</h1>
+        </div>
       </div>
     </div>
   );

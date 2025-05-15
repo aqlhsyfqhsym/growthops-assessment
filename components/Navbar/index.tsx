@@ -1,62 +1,54 @@
-'use client';
+"use client";
+import Image from "next/image";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
+import Logo from "./../../public/images/logo.svg";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   return (
-    <header className="  top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-5xl">
-      {/* Nav Container */}
-      <motion.nav
-        className="w-full px-6 py-3 bg-black/60 backdrop-blur-md rounded-full flex items-center justify-between text-white shadow-md"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        {/* Logo */}
-        <Link href="/">
-          <Image
-            src="/logo.svg" // Replace with your actual logo path
-            alt="Logo"
-            width={32}
-            height={32}
-            className="rounded-full"
-          />
-        </Link>
-
-        {/* Menu button */}
-        <div
-          className="flex items-center gap-2 cursor-pointer select-none"
-          onClick={toggleMenu}
-        >
-          <span className="text-sm font-medium tracking-wider">MENU</span>
-          <div className="space-y-1">
-            <span className="block w-4 h-0.5 bg-white" />
-            <span className="block w-4 h-0.5 bg-white" />
-          </div>
+    <header className="relative top-30 left-0 w-full z-100">
+      <div className="flex justify-between items-center w-9/12 mx-auto px-6 py-4 bg-black/80 backdrop-blur-md rounded-full border border-white/10">
+        <div className="w-10 h-10 relative">
+          <Image src={Logo} alt="Go Logo" fill className="object-contain" />
         </div>
-      </motion.nav>
 
-      {/* Animated Menu Panel */}
+        <button
+          className="text-white uppercase flex items-center gap-2 cursor-pointer"
+          onClick={() => setMenuOpen(true)}
+        >
+          <span className="text-xs tracking-widest ">Menu</span>
+          <div className="flex flex-col gap-[4px] ">
+            <div className="w-5 h-[2px] bg-white" />
+            <div className="w-5 h-[2px] bg-white" />
+            <div className="w-5 h-[2px] bg-white" />
+          </div>
+        </button>
+      </div>
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 flex flex-col items-center justify-center text-white"
+            className="fixed inset-0 bg-black/80 backdrop-blur-lg flex flex-col items-end justify-center text-white z-40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <ul className="space-y-6 text-2xl font-semibold">
-              <li><Link href="/" onClick={toggleMenu}>Home</Link></li>
-              <li><Link href="#about" onClick={toggleMenu}>About</Link></li>
-              <li><Link href="#projects" onClick={toggleMenu}>Projects</Link></li>
-              <li><Link href="#contact" onClick={toggleMenu}>Contact</Link></li>
-            </ul>
+            <nav className="flex flex-col items-end gap-8  uppercase tracking-wide w-[75rem] 2xl:w-full flex flex-col uppercase font-extrabold text-[clamp(1rem,4vw,6rem)] px-5 sm:px-18 2xl:px-30 leading-none">
+              <button
+                className="absolute top-30 text-xl cursor-pointer font-bold"
+                onClick={() => setMenuOpen(false)}
+              >
+                CLOSE ✕
+              </button>
+
+              <a href="#">Services</a>
+              <a href="#">Work</a>
+              <a href="#">Insights</a>
+              <a href="#">Careers</a>
+              <a href="#">Contact</a>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>
