@@ -3,10 +3,9 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 
 const montserrat = Montserrat({
-  variable: "--font-montserrat",
+  variable: "--font-sans", // this will override your --font-sans in CSS
   subsets: ["latin"],
-  display: "swap",
-});
+ });
 
 export const metadata: Metadata = {
   title: "Create Next App",

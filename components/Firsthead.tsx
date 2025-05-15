@@ -26,7 +26,7 @@ export default function Section(): JSX.Element {
     >
       <Navbar />
       <div className="fixed top-[-20vh] inset-0 -z-10  h-[100vh] bg-black/80">
-        <motion.div style={{ y }} className="relative w-full h-full ">
+        <motion.div style={{ y }} className="relative w-full h-full">
           {/* Desktop Background */}
           <div className="hidden sm:block absolute inset-0 bg-black/80">
             <Image
@@ -38,22 +38,28 @@ export default function Section(): JSX.Element {
           </div>
 
           {/* Mobile Background */}
-          <div className="block sm:hidden absolute inset-0">
+          <div className="block sm:hidden absolute inset-0 bg-black/80">
             <Image
               src={BackgroundMobile}
               alt="Background mobile"
               fill
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "cover", top: "10vh" }}
             />
           </div>
         </motion.div>
       </div>
 
-      <div className="relative flex items-center justify-center h-full px-5 sm:px-18 2xl:px-30">
-        <div className="w-[75rem] 2xl:w-full flex flex-col uppercase font-extrabold text-[clamp(2rem,6vw,8rem)] px-5 sm:px-18 2xl:px-30 leading-none ">
+      <div className="relative flex flex-col items-center justify-center h-full px-5 sm:px-18 2xl:px-30 gap-4">
+        <div className="xl:w-[75rem] 2xl:w-full flex flex-col uppercase font-extrabold text-[clamp(2rem,6vw,8rem)] px-5 sm:px-18 2xl:px-30 leading-none ">
           <h1 className="">Your new-breed,</h1>
           <h1 className="text-end">end-to-end</h1>
           <h1 className="sm:ps-30">digital ally</h1>
+        </div>
+        <div className="flex flex-col capitalize font-medium text-sm px-5 sm:hidden ms-40  ">
+          <p>
+            we are award winning marketing transformation partner delivering
+            unforgettable digital brands, experiences and technology
+          </p>
         </div>
       </div>
     </div>
