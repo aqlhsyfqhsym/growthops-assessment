@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import IntroPage from "@/components/IntroPage";
+
 import "./globals.css";
 
 const montserrat = Montserrat({
   variable: "--font-sans", // this will override your --font-sans in CSS
   subsets: ["latin"],
- });
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} antialiased`}>
+      <body className={`${montserrat.variable} antialiased scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen`}>
+        <IntroPage />
         {children}
       </body>
     </html>

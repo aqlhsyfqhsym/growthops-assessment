@@ -16,7 +16,7 @@ export default function Section(): JSX.Element {
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["100%", "-60%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["100%", "-55%"]);
 
   return (
     <div
@@ -24,7 +24,7 @@ export default function Section(): JSX.Element {
       className="relative h-screen overflow-hidden  "
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="fixed top-[-20vh] inset-0 -z-10  h-[100vh] bg-black/80">
         <motion.div style={{ y }} className="relative w-full h-full">
           {/* Desktop Background */}

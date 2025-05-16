@@ -2,11 +2,12 @@
 
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
-import IntroPage from "@/components/IntroPage";
+ import Navbar from "@/components/Navbar";
+
 import Masthead from "@/components/Firsthead";
 import About from "@/components/About";
 // import Abstract from "@/components/AbstractClient";
-  
+
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis();
@@ -20,10 +21,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="scroll-smooth">
-      <IntroPage />
+    <div className="scroll-smooth bg-black/80">
+      <Navbar />
       <Masthead />
       <About />
-     </div>
+    </div>
   );
 }

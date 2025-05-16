@@ -15,7 +15,7 @@ export default function Intro(): JSX.Element {
   const y = useTransform(scrollYProgress, [0, 110], ["0vh", "-150vh"]);
 
   return (
-    <div className="h-screen overflow-hidden  " ref={container}>
+    <div className="h-screen overflow-hidden " ref={container}>
       <motion.div style={{ y }} className="relative h-full">
         <div className="hidden sm:block">
           <Image
@@ -38,3 +38,4 @@ export default function Intro(): JSX.Element {
     </div>
   );
 }
+
