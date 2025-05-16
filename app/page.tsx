@@ -1,20 +1,29 @@
-import Image from "next/image";
-import ScrollingClient from "@/components/ScrollingClient";
+"use client";
 
+import { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
+import IntroPage from "@/components/IntroPage";
+import Masthead from "@/components/Firsthead";
+import About from "@/components/About";
+// import Abstract from "@/components/AbstractClient";
+  
 export default function Home() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
-    <div className="scroll-smooth items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          src="/landing.png"
-          alt="intro page"
-          fill
-          className="object-cover"
-        />
-        <ScrollingClient>
-          <div>Your custom content</div>
-        </ScrollingClient> 
-      </main>
-    </div>
+    <div className="scroll-smooth">
+      <IntroPage />
+      <Masthead />
+      <About />
+     </div>
   );
 }
