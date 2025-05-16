@@ -33,7 +33,7 @@ export default function Section(): JSX.Element {
               src={Background}
               alt="Background"
               fill
-              style={{ objectFit: "contain", top: "20vh" }}
+              style={{ objectFit: "contain", top: "10vh" }}
             />
           </div>
 
@@ -50,7 +50,7 @@ export default function Section(): JSX.Element {
       </div>
 
       <div className="relative flex flex-col items-center justify-center h-full px-5 sm:px-18 2xl:px-30 gap-4">
-        <div className="xl:w-[75rem] 2xl:w-full flex flex-col uppercase font-extrabold text-[clamp(2rem,6vw,8rem)] px-5 sm:px-18 2xl:px-30 leading-none ">
+        <div className="xl:w-[75rem] 2xl:w-full flex flex-col uppercase font-extrabold text-[clamp(2rem,6vw,8rem)] px-5 sm:px-18 2xl:px-52 leading-none ">
           <h1 className="">Your new-breed,</h1>
           <h1 className="text-end">end-to-end</h1>
           <h1 className="sm:ps-30">digital ally</h1>

@@ -22,12 +22,13 @@ export default function About() {
         </p>
 
         <h2
-          className="text-4xl md:text-5xl font-extrabold
-             bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400
-             bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient"
-        >
-          GrowthOps <span className="text-white">Asia</span>
-        </h2>
+  className="text-4xl md:text-5xl font-extrabold
+    bg-gradient-to-r from-blue-600 via-purple-600 to-pink-500
+    bg-clip-text text-transparent animate-gradient bg-[length:200%_200%]"
+>
+  GrowthOps Asia
+</h2>
+
       </div>
     </section>
   );
