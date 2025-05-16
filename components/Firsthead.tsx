@@ -21,7 +21,7 @@ export default function Section(): JSX.Element {
   return (
     <div
       ref={container}
-      className="relative h-screen overflow-hidden"
+      className="relative h-screen overflow-hidden  "
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
       <Navbar />
