@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <header className="relative sm:top-30 top-10 left-0 w-full z-50">
-      <div className="flex justify-between items-center w-11/12 xl:w-9/12 mx-auto px-6 py-4 bg-black/80 backdrop-blur-md rounded-full border border-white/10">
+      <div className="flex justify-between items-center w-11/12 xl:w-9/12 mx-auto px-6 py-4 backdrop-blur-md rounded-full border border-white/10">
         <div className="w-10 h-10 relative">
           <Image src={Logo} alt="Go Logo" fill className="object-contain" />
         </div>
@@ -29,7 +29,7 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="fixed inset-0 bg-black/80 backdrop-blur-lg flex flex-col items-end justify-center text-white z-40"
+            className="fixed inset-0 backdrop-blur-lg flex flex-col items-end justify-center text-white z-40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

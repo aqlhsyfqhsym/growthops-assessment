@@ -26,7 +26,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="scroll-smooth bg-black/80">
+    <div className="scroll-smooth ">
       <Navbar />
       <Masthead />
       <Abstract align="left" variant="svg1" />

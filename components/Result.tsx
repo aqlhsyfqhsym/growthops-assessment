@@ -4,7 +4,7 @@ import TitleHeading from "./molecules/StatHighlights";
 
 export default function Result() {
   return (
-    <section className="bg-black/80 text-white  md:px-12 text-center">
+    <section className=" text-white  md:px-12 text-center">
       <span className="relative inline-block px-10">
         <Image
           src="./../images/shape/deisgn-ellipse.svg"

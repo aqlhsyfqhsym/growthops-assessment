@@ -3,8 +3,7 @@ import Image from "next/image";
 import { JSX, useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 
-import Navbar from "@/components/Navbar";
-
+ 
 import BackgroundMobile from "./../public/images/abstract-mobile.svg";
 import Background from "./../public/images/abstract.svg";
 
@@ -25,10 +24,10 @@ export default function Section(): JSX.Element {
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
       {/* <Navbar /> */}
-      <div className="fixed top-[-20vh] inset-0 -z-10  h-[100vh] bg-black/80">
+      <div className="fixed top-[-20vh] inset-0 -z-10  h-[100vh] ">
         <motion.div style={{ y }} className="relative w-full h-full">
           {/* Desktop Background */}
-          <div className="hidden sm:block absolute inset-0 bg-black/80">
+          <div className="hidden sm:block absolute inset-0 ">
             <Image
               src={Background}
               alt="Background"
@@ -38,7 +37,7 @@ export default function Section(): JSX.Element {
           </div>
 
           {/* Mobile Background */}
-          <div className="block sm:hidden absolute inset-0 bg-black/80">
+          <div className="block sm:hidden absolute inset-0 ">
             <Image
               src={BackgroundMobile}
               alt="Background mobile"
