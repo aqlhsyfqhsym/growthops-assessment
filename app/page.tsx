@@ -8,6 +8,7 @@ import Masthead from "@/components/Firsthead";
 import About from "@/components/About";
 import Abstract from "@/components/atoms/Abstract";
 import WhatWeDo from "@/components/WhatWeDo";
+import Result from "@/components/Result";
 // import Abstract from "@/components/AbstractClient";
 
 export default function Home() {
@@ -26,10 +27,12 @@ export default function Home() {
     <div className="scroll-smooth bg-black/80">
       <Navbar />
       <Masthead />
-         <Abstract align="left" variant="svg1" />
-        <About />
-
-        <WhatWeDo />
-     </div>
+      <Abstract align="left" variant="svg1" />
+      <div className ="flex flex-col-reverse sm:flex-col">
+      <About />
+      <WhatWeDo />
+      </div>
+      <Result />
+    </div>
   );
 }

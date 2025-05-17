@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="bg-black text-white py-24 px-6 md:px-12 text-center hidden sm:block">
+    <section className="bg-black text-white py-24 px-6 md:px-12 text-center ">
       <div className="max-w-4xl mx-auto flex flex-col gap-20 ">
         <p
-          className="text-2xl  font-medium relative "
+          className="text-2xl  font-medium relative sm:block hidden "
           style={{ lineHeight: "44px" }}
         >
           With a focus in fusing
@@ -21,14 +21,40 @@ export default function About() {
             <span className="relative z-10 text-cyan-400 font-medium ">
               design
             </span>
-          </span>{" "}
-          and
+          </span> 
+           and
           <span className="text-cyan-400 font-mono">
-            {" "}
+            
             &lt;technology/&gt;{" "}
           </span>{" "}
           to
           <br /> build and sustain market leaders
+        </p>
+
+            <p
+          className="text-[clamp(0.5rem,6vw,1.5rem)]  font-medium relative sm:hidden block"
+          style={{ lineHeight: "44px" }}
+        >
+          With a focus in fusing <br />
+          <span className="text-cyan-400 font-medium"> strategy</span>,
+          <span className="relative inline-block px-6 py-1  ">
+            <Image
+              src="./../images/shape/design-box.svg"  
+              alt="design shape"
+              fill
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <span className="relative z-10 text-cyan-400 font-medium ">
+              design
+            </span>
+          </span> 
+           and
+          <span className="text-cyan-400 font-mono">
+            
+           <br/> &lt;technology/&gt;{" "}
+          </span>{" "}
+          to
+        build and    <br />sustain market leaders
         </p>
 
         <p className="text-2xl  font-medium">

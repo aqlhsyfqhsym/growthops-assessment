@@ -12,9 +12,9 @@ export default function Abstract({
   const isLeft = align === "left";
 
   return (
-    <div className={`absolute ${isLeft ? "left-0" : "right-0"} `}>
+    <div className={`absolute ${isLeft ? "left-0" : "right-0"} sm:block hidden` }>
       {variant === "svg1" ? (
-        // --- SVG 1 ---
+     
         <svg
           width="652"
           height="1061"
@@ -64,9 +64,7 @@ export default function Abstract({
             </linearGradient>
           </defs>
         </svg>
-      ) : (
-        // --- SVG 2 ---
-
+      ) : ( 
         <svg
           width="457"
           height="1062"

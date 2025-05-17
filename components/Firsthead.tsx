@@ -55,7 +55,7 @@ export default function Section(): JSX.Element {
           <h1 className="text-end">end-to-end</h1>
           <h1 className="sm:ps-30">digital ally</h1>
         </div>
-        <div className="flex flex-col capitalize font-medium text-sm px-5 sm:hidden ms-40  ">
+        <div className="flex flex-col capitalize font-medium text-sm ps-20 sm:hidden ms-10    ">
           <p>
             we are award winning marketing transformation partner delivering
             unforgettable digital brands, experiences and technology
