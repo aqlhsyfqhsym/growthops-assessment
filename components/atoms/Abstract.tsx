@@ -12,7 +12,7 @@ export default function Abstract({
   const isLeft = align === "left";
 
   return (
-    <div className={`absolute ${isLeft ? "left-0" : "right-0"} sm:block hidden` }>
+    <div className={`absolute bg-black/80 ${isLeft ? "left-0" : "right-0"} sm:block hidden` }>
       {variant === "svg1" ? (
      
         <svg
