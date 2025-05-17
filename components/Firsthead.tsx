@@ -43,7 +43,7 @@ export default function Section(): JSX.Element {
               src={BackgroundMobile}
               alt="Background mobile"
               fill
-              style={{ objectFit: "cover", top: "10vh" }}
+              style={{ objectFit: "cover"  }}
             />
           </div>
         </motion.div>
