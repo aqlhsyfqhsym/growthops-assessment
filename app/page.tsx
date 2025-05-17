@@ -35,9 +35,10 @@ export default function Home() {
       <WhatWeDo />
       </div>
       <Result />
-      {/* <Abstract align="right" variant="svg2" /> */}
+      <Abstract align="right" variant="svg2" />
       <Feedback />
-      {/* <PartnerLogo /> */}
+      <PartnerLogo />
+ 
 
     </div>
   );

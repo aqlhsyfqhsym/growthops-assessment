@@ -1,6 +1,15 @@
 import React from "react";
 import Image from "next/image";
- 
+import LogoMarquee from "./molecules/Marquee/MarqueeItem";
+
+const logos = [
+  { src: "/logos/uob.svg", alt: "UOB" },
+  { src: "/logos/toyota.svg", alt: "Toyota" },
+  { src: "/logos/posb.svg", alt: "POSB" },
+  { src: "/logos/singlife.svg", alt: "Singlife" },
+  { src: "/logos/amway.svg", alt: "Amway" },
+];
+
 export default function PartnerLogo() {
   return (
     <section className=" text-white  md:px-12 text-center mt-20">
@@ -27,6 +36,10 @@ export default function PartnerLogo() {
       >
         Proud to <br /> work with
       </span>
+
+         <div className="container mx-auto w-full h-screen text-white flex justify-center items-center overflow-x-hidden">
+      <LogoMarquee  />
+    </div>
     </section>
   );
 }
