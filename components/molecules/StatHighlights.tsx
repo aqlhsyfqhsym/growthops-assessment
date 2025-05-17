@@ -26,7 +26,7 @@ const TitleHeading: React.FC<TitleHeadingProps> = ({
 }) => {
   return (
 <div
-  className={`lg:h-48 flex flex-col justify-between sm:items-${align} ${
+  className={`lg:h-48 xl:h-full flex flex-col justify-between sm:items-${align} ${
     align === "start" ? "me-20 md:me-0" : "ms-20 md:ms-0"
   }`}
 >

@@ -9,6 +9,7 @@ import About from "@/components/About";
 import Abstract from "@/components/atoms/Abstract";
 import WhatWeDo from "@/components/WhatWeDo";
 import Result from "@/components/Result";
+import Feedback from "@/components/Feedback";
 // import Abstract from "@/components/AbstractClient";
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
       <WhatWeDo />
       </div>
       <Result />
+      <Feedback />
     </div>
   );
 }
