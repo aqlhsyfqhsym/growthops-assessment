@@ -12,7 +12,7 @@ const logos = [
 
 export default function PartnerLogo() {
   return (
-    <section className="h-[80vh] text-white  md:px-12 text-center mt-10">
+    <section className="h-screen text-white  md:px-12 text-center mt-10">
       <span className="relative inline-block px-6">
         <Image
           src="./../images/shape/deisgn-ellipse2.svg"

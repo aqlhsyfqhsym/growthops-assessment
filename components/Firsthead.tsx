@@ -24,7 +24,7 @@ export default function Section(): JSX.Element {
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
       {/* <Navbar /> */}
-      <div className="fixed top-[-20vh] inset-0 -z-10  h-[100vh] ">
+      <div className="fixed top-[-20vh] inset-0 -z-10  h-screen ">
         <motion.div style={{ y }} className="relative w-full h-full">
           {/* Desktop Background */}
           <div className="hidden sm:block absolute inset-0 ">

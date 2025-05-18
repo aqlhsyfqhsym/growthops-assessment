@@ -40,3 +40,17 @@ body {
     rgba(0, 0, 0, 0)
   );
 }
+
+label {
+  color: #999D9F;
+}
+ 
+input , select  {
+  background-color: #0E1015;
+  border: 1px solid rgba(245, 245, 245, 0.24);  
+}
+
+ul li {
+  color:#F5F5F5;
+  font-weight: 400;
+}
