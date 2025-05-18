@@ -21,7 +21,7 @@ export default function Abstract({
 
   return (
     <div
-      className={`absolute z-10 ${isLeft ? "left-0" : "right-0"} sm:block hidden`}
+      className={`absolute z-10 ${isLeft ? "left-0" : "right-0"}  `}
     >
       <Image
         src={imageSrc}
