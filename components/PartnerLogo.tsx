@@ -12,7 +12,7 @@ const logos = [
 
 export default function PartnerLogo() {
   return (
-    <section className=" text-white  md:px-12 text-center mt-20">
+    <section className="h-[80vh] text-white  md:px-12 text-center mt-10">
       <span className="relative inline-block px-6">
         <Image
           src="./../images/shape/deisgn-ellipse2.svg"
@@ -37,7 +37,7 @@ export default function PartnerLogo() {
         Proud to <br /> work with
       </span>
 
-      <div className="container mx-auto w-full h-screen text-white flex justify-center items-center overflow-x-hidden">
+      <div className="container mx-auto w-full  text-white flex justify-center items-center overflow-x-hidden mt-20">
         <LogoMarquee />
       </div>
     </section>
