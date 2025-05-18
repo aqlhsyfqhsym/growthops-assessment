@@ -106,7 +106,7 @@ export default function Section() {
       </div>
 
   
-      <div className="relative z-10 flex flex-col uppercase font-extrabold text-[clamp(2rem,6vw,8rem)] leading-none gap-4 max-w-8xl -top-16">
+      <div className="relative z-10 flex flex-col uppercase font-extrabold text-[clamp(2rem,6vw,8rem)] leading-none gap-4 max-w-8xl ms:-top-16">
         <h1>Your new-breed,</h1>
         <h1 className="text-end">end-to-end</h1>
         <h1 className="sm:ps-30">digital ally</h1>

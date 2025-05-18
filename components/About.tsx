@@ -22,7 +22,7 @@ export default function About() {
               design
             </span>
           </span> 
-           and
+           and&nbsp;
           <span className="text-cyan-400 font-mono">
             
             &lt;technology/&gt;{" "}
@@ -49,10 +49,9 @@ export default function About() {
             </span>
           </span> 
            and
-          <span className="text-cyan-400 font-mono">
-            
-           <br/> &lt;technology/&gt;{" "}
-          </span>{" "}
+          <span className="text-cyan-400 font-mono"> 
+           <br/>&nbsp;&lt;technology/&gt; 
+          </span> 
           to
         build and    <br />sustain market leaders
         </p>

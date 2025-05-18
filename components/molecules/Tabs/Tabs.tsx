@@ -16,8 +16,8 @@ const Tabs: React.FC<TabsProps> = ({ tabs, accentColor = "#00E0DC" }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="text-white md:px-10 md:py-10 ">
-      <div className="flex   bg-black rounded-full p-1 border border-gray-700 my-6 w-fit mx-auto">
+    <div className="text-white md:px-10 md:py-10 relative z-40">
+      <div className="flex bg-black rounded-full p-1 border border-gray-700 my-6 w-fit mx-auto">
         {tabs.map((tab, idx) => (
           <button
             key={idx}

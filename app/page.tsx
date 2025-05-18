@@ -51,7 +51,7 @@ export default function Home() {
       <Navbar />
       <Intro />
       <Abstract align="left" variant="svg1" />
-      <div className="flex flex-col-reverse sm:flex-col">
+      <div className="flex flex-col-reverse sm:flex-col relative ">
         <About />
         <WhatWeDo />
       </div>
