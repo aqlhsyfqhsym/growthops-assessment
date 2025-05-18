@@ -37,7 +37,6 @@ const ContactPage = () => {
   return (
     <>
       <Navbar />
-
       <div className="relative min-h-screen mx-auto mt-10 text-white p-8 md:p-12">
         <div className=" max-w-[1440px] mx-auto">
           <h1 className="text-[clamp(2rem,6vw,6rem)] font-extrabold uppercase">
@@ -51,18 +50,17 @@ const ContactPage = () => {
             onSubmit={handleSubmit}
             className="w-full max-w-4xl mt-14 space-y-6 relative z-20"
           >
-               <div className="flex flex-col ">
-                <label className="mb-1 text-sm">Full name</label>
-                <input
-                  name="name"
-                  type="text"
-                  className="bg-[#0E1015] p-3 rounded-md w-1/2"
-                  required
-                />
-              </div> 
-         
+            <div className="flex flex-col ">
+              <label className="mb-1 text-sm">Full name</label>
+              <input
+                name="name"
+                type="text"
+                className="bg-[#0E1015] p-3 rounded-md w-full md:w-1/2"
+                required
+              />
+            </div>
+
             <div className="grid md:grid-cols-2  md:gap-4  py-2 sm:py-0">
-           
               <div className="flex flex-col py-2 sm:py-0">
                 <label className="mb-1 text-sm">Phone number</label>
                 <div className="flex gap-2">

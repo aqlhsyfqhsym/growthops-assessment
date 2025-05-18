@@ -1,10 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Link from "next/link";
 import Lenis from "@studio-freight/lenis";
-import Navbar from "@/components/Navbar";
+import { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
-import Masthead from "@/components/Landing";
+import Navbar from "@/components/Navbar";
+import Intro from "@/components/Landing";
 import About from "@/components/About";
 import Abstract from "@/components/atoms/Abstract";
 import WhatWeDo from "@/components/WhatWeDo";
@@ -13,8 +15,6 @@ import Feedback from "@/components/Feedback";
 import PartnerLogo from "@/components/PartnerLogo";
 import Footer from "@/components/Footer";
 import Preloader from "@/components/Splashscreen";
-import Link from "next/link";
-import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -49,7 +49,7 @@ export default function Home() {
         {isLoading && <Preloader />}
       </AnimatePresence>
       <Navbar />
-      <Masthead />
+      <Intro />
       <Abstract align="left" variant="svg1" />
       <div className="flex flex-col-reverse sm:flex-col">
         <About />
