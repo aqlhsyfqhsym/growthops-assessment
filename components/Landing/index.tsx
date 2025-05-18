@@ -20,10 +20,10 @@ export default function Section() {
       variants={slideUp}
       initial="initial"
       animate="enter"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden px-5 sm:px-18 2xl:px-30"
+      className="relative h-[120vh] flex items-center justify-center overflow-hidden px-5 sm:px-18 2xl:px-30 "
     >
       {/* Background SVG stack */}
-      <div className="absolute inset-0 -z-10 items-center justify-center hidden sm:flex">
+      <div className="absolute inset-0 z-10 items-center justify-center hidden md:flex -top-36">
         <motion.div
           {...blink}
           className="absolute top-1/2 left-1/2 w-[30vw] h-[30vw] -translate-x-1/2 -translate-y-1/2"
@@ -97,9 +97,7 @@ export default function Section() {
           />
         </motion.div>
       </div>
-
-
-      <div className="block sm:hidden absolute inset-0 ">
+      <div className="block md:hidden absolute inset-0 ">
         <Image
           src="/images/abstract-mobile.svg"
           alt="Background mobile"
@@ -107,8 +105,9 @@ export default function Section() {
           style={{ objectFit: "cover" }}
         />
       </div>
-      {/* Text content */}
-      <div className="relative z-10 flex flex-col uppercase font-extrabold text-[clamp(2rem,6vw,8rem)] leading-none gap-4 max-w-7xl">
+
+  
+      <div className="relative z-10 flex flex-col uppercase font-extrabold text-[clamp(2rem,6vw,8rem)] leading-none gap-4 max-w-8xl -top-16">
         <h1>Your new-breed,</h1>
         <h1 className="text-end">end-to-end</h1>
         <h1 className="sm:ps-30">digital ally</h1>
