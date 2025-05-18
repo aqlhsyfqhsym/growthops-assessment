@@ -13,7 +13,7 @@ export const TestimonialContent: React.FC<TabsContent> = ({
   author,
   position,
 }) => (
-  <div className="flex flex-col md:mt-10 md:w-3/4 mx-auto text-left h-screen">
+  <div className="flex flex-col md:mt-10 md:w-3/4 mx-auto text-left ">
     <div className="flex flex-row gap-2 md:gap-10 items-start">
       <Image
         src="/images/shape/quote.svg"
@@ -24,7 +24,7 @@ export const TestimonialContent: React.FC<TabsContent> = ({
       />
 
       <div className="flex flex-col gap-8">
-        <p className="text-gray-200 text-[clamp(1rem,6vw,1.5rem)] text-left">
+        <p className="text-gray-200 text-[clamp(1rem,4vw,1.5rem)] text-left">
           {quote}
         </p>
         <p className="font-semibold">
