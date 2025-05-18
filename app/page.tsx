@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 import Navbar from "@/components/Navbar";
 
-import Masthead from "@/components/Firsthead";
+import Masthead from "@/components/Landing";
 import About from "@/components/About";
 import Abstract from "@/components/atoms/Abstract";
 import WhatWeDo from "@/components/WhatWeDo";
@@ -12,9 +12,26 @@ import Result from "@/components/Result";
 import Feedback from "@/components/Feedback";
 import PartnerLogo from "@/components/PartnerLogo";
 import Footer from "@/components/Footer";
+import Preloader from "@/components/Splashscreen";
 import Link from "next/link";
+import { AnimatePresence } from "framer-motion";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+      }, 2000);
+    })();
+  }, []);
+
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -28,6 +45,9 @@ export default function Home() {
 
   return (
     <div className="scroll-smooth ">
+      <AnimatePresence mode="wait">
+        {isLoading && <Preloader />}
+      </AnimatePresence>
       <Navbar />
       <Masthead />
       <Abstract align="left" variant="svg1" />

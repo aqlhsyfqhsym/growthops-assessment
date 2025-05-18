@@ -20,24 +20,20 @@ export default function Section(): JSX.Element {
   return (
     <div
       ref={container}
-      className="relative h-screen overflow-hidden  "
+      className="relative h-screen overflow-hidden"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      {/* <Navbar /> */}
-      <div className="fixed top-[-20vh] inset-0 -z-10  h-screen ">
+       <div className="fixed top-[-20vh] inset-0 -z-10  h-screen ">
         <motion.div style={{ y }} className="relative w-full h-full">
-          {/* Desktop Background */}
-          <div className="hidden sm:block absolute inset-0 ">
+           <div className="hidden sm:block absolute inset-0 ">
             <Image
               src={Background}
               alt="Background"
               fill
-              style={{ objectFit: "contain", top: "10vh" }}
+              style={{ objectFit: "cover", top: "10vh" }}
             />
-          </div>
-
-          {/* Mobile Background */}
-          <div className="block sm:hidden absolute inset-0 ">
+          </div> 
+           <div className="block sm:hidden absolute inset-0 ">
             <Image
               src={BackgroundMobile}
               alt="Background mobile"
