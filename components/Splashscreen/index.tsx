@@ -1,10 +1,10 @@
 "use client";
 
-import styles from "./style.module.scss";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import Image from "next/image";
+import styles from "./style.module.scss";
 import { slideUp } from "./anim";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function Index() {
   const [isVisible, setIsVisible] = useState(true);

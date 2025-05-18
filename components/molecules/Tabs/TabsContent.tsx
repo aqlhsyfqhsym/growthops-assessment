@@ -1,6 +1,5 @@
-// components/TestimonialContent.tsx
+ import React from "react";
 import Image from "next/image";
-import React from "react";
 
 interface TabsContent {
   quote: string;

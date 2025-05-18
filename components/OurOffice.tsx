@@ -1,4 +1,3 @@
-// app/(or wherever)/Office.tsx
 import React from 'react';
 import Card from "./molecules/CardDetails";
 

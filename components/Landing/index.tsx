@@ -22,8 +22,7 @@ export default function Section() {
       animate="enter"
       className="relative h-[120vh] flex items-center justify-center overflow-hidden px-5 sm:px-18 2xl:px-30 "
     >
-      {/* Background SVG stack */}
-      <div className="absolute inset-0 z-10 items-center justify-center hidden md:flex -top-36">
+       <div className="absolute inset-0 z-10 items-center justify-center hidden md:flex -top-36">
         <motion.div
           {...blink}
           className="absolute top-1/2 left-1/2 w-[30vw] h-[30vw] -translate-x-1/2 -translate-y-1/2"

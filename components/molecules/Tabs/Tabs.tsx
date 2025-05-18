@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { TestimonialContent } from "./TabsContent";
 
-// Props for the individual tabs
-interface TabData {
+ interface TabData {
   label: string;
   content: React.ReactNode;
 }

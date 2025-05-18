@@ -13,8 +13,7 @@ export default function Abstract({
 }: AbstractProps) {
   const isLeft = align === "left";
 
-  // Assuming you saved the SVGs as image files in /public/images/abstract/
-  const imageSrc =
+   const imageSrc =
     variant === "svg1"
       ? "/images/shape/vector.svg"
       : "/images/shape/vector2.svg";
