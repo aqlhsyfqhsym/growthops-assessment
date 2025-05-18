@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import IntroPage from "@/components/IntroPage";
-
+ 
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -22,8 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.variable} antialiased scroll-smooth snap-y snap-mandatory overflow-y-scroll h-screen`}>
-        {/* <IntroPage /> */}
-        {children}
+         {children}
       </body>
     </html>
   );

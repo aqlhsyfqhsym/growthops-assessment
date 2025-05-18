@@ -5,19 +5,19 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import Logo from "./../../public/images/logo.svg";
-
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-
-   
-
   return (
     <header className="  relative sm:top-30 top-10 left-0 w-full z-50">
       <div className="flex justify-between items-center w-11/12 xl:w-9/12 mx-auto px-6 py-4   rounded-full border border-white/10 bg-black/80 ">
-       <Link href="/" className="w-10 h-10 relative block">
-      <Image src={Logo} alt="Go Logo" fill className="object-contain" />
-    </Link>
+        <Link href="/" className="w-10 h-10 relative block">
+          <Image
+            src="/images/logo.svg"
+            alt="Go Logo"
+            fill
+            className="object-contain"
+          />
+        </Link>
         <button
           className="cursor-pointer text-white uppercase flex items-center gap-2 "
           onClick={() => setMenuOpen(true)}
