@@ -37,9 +37,9 @@ export default function PartnerLogo() {
         Proud to <br /> work with
       </span>
 
-         <div className="container mx-auto w-full h-screen text-white flex justify-center items-center overflow-x-hidden">
-      <LogoMarquee  />
-    </div>
+      <div className="container mx-auto w-full h-screen text-white flex justify-center items-center overflow-x-hidden">
+        <LogoMarquee />
+      </div>
     </section>
   );
 }

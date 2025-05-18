@@ -11,7 +11,7 @@ type MarqueeItemProps = {
 
 const MarqueeItem: React.FC<MarqueeItemProps> = ({ images, from, to }) => {
   return (
-    <div className="flex MyGradient">
+    <div className="flex gradient">
       {[1, 2].map((_, i) => (
         <motion.div
           key={i}

@@ -11,8 +11,8 @@ import WhatWeDo from "@/components/WhatWeDo";
 import Result from "@/components/Result";
 import Feedback from "@/components/Feedback";
 import PartnerLogo from "@/components/PartnerLogo";
-// import Abstract from "@/components/AbstractClient";
-
+import Footer from "@/components/Footer";
+  
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis();
@@ -38,6 +38,7 @@ export default function Home() {
       <Abstract align="right" variant="svg2" />
       <Feedback />
       <PartnerLogo />
+      <Footer />
  
 
     </div>
