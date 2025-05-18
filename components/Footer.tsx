@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid text-sm mb-6  sm:flex  justify-center  ">
+      <div className="grid text-sm mb-6  sm:flex  justify-center  gap-4 ">
         {/* Top row: 3 items */}
         <div className="grid grid-cols-3 col-span-3 gap-4 justify-items-center">
           <Link href="/services">
